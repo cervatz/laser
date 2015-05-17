@@ -56,6 +56,8 @@
 -define:UNITY_EDITOR_64
 -define:UNITY_EDITOR_OSX
 'Assets/scripts/Controls.cs'
+'Assets/scripts/Enemy.cs'
+'Assets/scripts/EnemyGenerator.cs'
 'Assets/scripts/Laser.cs'
 'Assets/scripts/Weapon.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
