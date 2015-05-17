@@ -3,12 +3,15 @@ using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]
 public class Laser : MonoBehaviour {
-
+	
 	private LineRenderer lineRenderer;
+
+	private GameObject score;
 
 	// Use this for initialization
 	void Start () {
 		lineRenderer = GetComponent<LineRenderer> ();	
+
 	}
 	
 	// Update is called once per frame
@@ -36,12 +39,15 @@ public class Laser : MonoBehaviour {
 				{
 					AudioSource audio = GetComponent<AudioSource>();
 					audio.Play();
-					Destroy(hit.collider.gameObject);					
-					print ("Enemy is hit");					
+					Destroy(hit.collider.gameObject);				
+					ScoreHolder scoreHolder = GameObject.Find("GameLogic").GetComponent<ScoreHolder>();
+					scoreHolder.IncreaseScore(10);
 				}
 			} 
 		}
+	}
 
+	void IncreaseScore() {
 	}
 
 
