@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(AudioSource))]
 public class Laser : MonoBehaviour {
 
 	private LineRenderer lineRenderer;
@@ -33,6 +34,8 @@ public class Laser : MonoBehaviour {
 
 				if(hit.collider.tag == "Enemy")
 				{
+					AudioSource audio = GetComponent<AudioSource>();
+					audio.Play();
 					Destroy(hit.collider.gameObject);					
 					print ("Enemy is hit");					
 				}
