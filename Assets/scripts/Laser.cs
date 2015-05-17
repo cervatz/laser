@@ -33,8 +33,8 @@ public class Laser : MonoBehaviour {
 
 				if(hit.collider.tag == "Enemy")
 				{
-					print ("Enemy is hit");
-					
+					Destroy(hit.collider.gameObject);					
+					print ("Enemy is hit");					
 				}
 			} 
 		}

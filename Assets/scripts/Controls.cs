@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Controls : MonoBehaviour {
 
-	public int rotationSpeed;
-	public int movementSpeed;
+	public float rotationSpeed;
+	public float movementSpeed;
 	public float friction;
 	public float lerpSpeed;
 

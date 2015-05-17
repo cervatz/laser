@@ -5,8 +5,8 @@ public class EnemyGenerator : MonoBehaviour {
 
 	public GameObject enemy;
 
-	private float planeDiameter = 20.0f;
-
+	private float planeDiameter = 15.0f;
+	
 	// Use this for initialization
 	void Start () {
 		InvokeRepeating("InstantiateEnemy", 2, 1);
