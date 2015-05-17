@@ -12,14 +12,34 @@ public class Laser : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetButton("Jump")) {
+			lineRenderer.enabled = true;
+			Fire ();
+		} else {
+			lineRenderer.enabled = false;
+		}
+	}
+	
+	void Fire() {
+
+		lineRenderer.SetPosition (1, new Vector3 (0, 0, 5000));
+
 		RaycastHit hit;
 
 		if (Physics.Raycast (transform.position, transform.forward, out hit)) {
-			if (hit.collider) {
+
+			if(hit.collider) {
 				lineRenderer.SetPosition (1, new Vector3 (0, 0, hit.distance));
-			}
-		} else {
-			lineRenderer.SetPosition (1, new Vector3 (0, 0, 5000));
+
+				if(hit.collider.tag == "Enemy")
+				{
+					print ("Enemy is hit");
+					
+				}
+			} 
 		}
+
 	}
+
+
 }
