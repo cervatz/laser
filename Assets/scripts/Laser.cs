@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]
@@ -6,12 +7,13 @@ public class Laser : MonoBehaviour {
 	
 	private LineRenderer lineRenderer;
 
-	private GameObject score;
+	public Text score;
+	private int counter = 0;
 
 	// Use this for initialization
 	void Start () {
 		lineRenderer = GetComponent<LineRenderer> ();	
-
+//		score.text = "Score: " + counter;
 	}
 	
 	// Update is called once per frame
@@ -39,9 +41,12 @@ public class Laser : MonoBehaviour {
 				{
 					AudioSource audio = GetComponent<AudioSource>();
 					audio.Play();
-					Destroy(hit.collider.gameObject);				
-					ScoreHolder scoreHolder = GameObject.Find("GameLogic").GetComponent<ScoreHolder>();
-					scoreHolder.IncreaseScore(10);
+					Destroy(hit.collider.gameObject);
+
+					counter += 1;
+					score.text = "Score: " + counter;
+
+
 				}
 			} 
 		}

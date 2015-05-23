@@ -47,7 +47,7 @@ public class Controls : MonoBehaviour {
 			} else if(Input.GetAxis("Horizontal") < 0) {
 				direction = -1;
 			}
-			
+
 			xDeg += direction * rotationSpeed * friction;
 			fromRotation = transform.rotation;
 			toRotation = Quaternion.Euler(0, xDeg, 0);
