@@ -4,16 +4,17 @@ using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]
 public class Laser : MonoBehaviour {
-	
-	private LineRenderer lineRenderer;
 
 	public Text score;
+
+	private LineRenderer lineRenderer;
+	
 	private int counter = 0;
 
 	// Use this for initialization
 	void Start () {
 		lineRenderer = GetComponent<LineRenderer> ();	
-//		score.text = "Score: " + counter;
+		score.text = "Score: " + counter;
 	}
 	
 	// Update is called once per frame
@@ -51,9 +52,4 @@ public class Laser : MonoBehaviour {
 			} 
 		}
 	}
-
-	void IncreaseScore() {
-	}
-
-
 }
