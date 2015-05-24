@@ -10,7 +10,6 @@ public class GameLogic : MonoBehaviour {
 
 	public void StartGame() {
 		print ("GameLogic StartGame()");
+		Application.LoadLevel("laser");
 	}
-
-
 }
