@@ -52,6 +52,7 @@
      <Compile Include="Assets\scripts\GameLogic.cs" />
      <Compile Include="Assets\scripts\Laser.cs" />
      <Compile Include="Assets\scripts\ScoreHolder.cs" />
+     <Compile Include="Assets\scripts\TouchInput.cs" />
      <Compile Include="Assets\scripts\Weapon.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
