@@ -1,13 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Enemy.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/TouchInput.cs">
     <Files>
-      <File FileName="Assets/scripts/Enemy.cs" Line="16" Column="18" />
-      <File FileName="Assets/scripts/Laser.cs" Line="27" Column="4" />
-      <File FileName="Assets/scripts/Controls.cs" Line="50" Column="4" />
-      <File FileName="Assets/scripts/EnemyGenerator.cs" Line="12" Column="45" />
+      <File FileName="Assets/scripts/Enemy.cs" Line="17" Column="118" />
+      <File FileName="Assets/scripts/Controls.cs" Line="50" Column="1" />
+      <File FileName="Assets/scripts/EnemyGenerator.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/ScoreHolder.cs" Line="23" Column="5" />
       <File FileName="Assets/scripts/GameLogic.cs" Line="14" Column="3" />
+      <File FileName="Assets/scripts/TouchInput.cs" Line="11" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

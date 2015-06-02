@@ -44,7 +44,4 @@ public class TouchInput : MonoBehaviour {
 			destination = Vector3.zero;
 		}
 	}
-
-
-
 }
