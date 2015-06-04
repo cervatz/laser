@@ -7,9 +7,12 @@ public class TouchInput : MonoBehaviour {
 
 	private Vector3 destination = Vector3.zero;
 
+	private GameObject aimInstance;
+
 	// Use this for initialization
 	void Start () {
-	
+		GameObject aimPrefab = (GameObject) Resources.Load(Names.AIM_PREFAB);
+		aimInstance = (GameObject) Instantiate (aimPrefab, new Vector3(0f, Constants.Y, 0f), Quaternion.identity);
 	}
 	
 	// Update is called once per frame
@@ -20,21 +23,25 @@ public class TouchInput : MonoBehaviour {
 			RaycastHit hit;
 			if(Physics.Raycast(ray, out hit)) {
 				GameObject recipient = hit.transform.gameObject;
-				if(recipient.CompareTag("Enemy")) {
+				if(recipient.CompareTag(Tags.ENEMY_TAG)) {
 					print(recipient.name);
 					Destroy(recipient);
-				} else if(recipient.CompareTag("Plane")) {
-					destination = new Vector3(hit.point.x, 0.5f, hit.point.z);
+				} else if(recipient.CompareTag(Tags.PLANE_TAG)) {
+					destination = new Vector3(hit.point.x, Constants.Y, hit.point.z);
+					PlaceAim(destination);
 				}
 			}
 		}
 
 		Move ();
+	}
 
+	void PlaceAim(Vector3 position) { 
+		aimInstance.transform.position = position;
 	}
 
 	void Move() {
-		if (destination != Vector3.zero) {
+		if(aimInstance.transform.position != transform.position) {
 			transform.position = Vector3.MoveTowards (transform.position, destination, speedToDestination * Time.deltaTime);
 		}
 	}

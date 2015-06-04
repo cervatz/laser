@@ -3,12 +3,14 @@ using System.Collections;
 
 public class EnemyGenerator : MonoBehaviour {
 
-	public GameObject enemy;
+	private GameObject enemyPrefab;
 
 	private float planeDiameter = 15.0f;
-	
+
 	// Use this for initialization
 	void Start () {
+		enemyPrefab = (GameObject) Resources.Load(Names.ENEMY_PREFAB);
+
 		InvokeRepeating("InstantiateEnemy", 2, 1);
 	}
 	
@@ -18,7 +20,7 @@ public class EnemyGenerator : MonoBehaviour {
 
 	void InstantiateEnemy() {
 		Vector3 enemyPosition = new Vector3(Random.Range(-planeDiameter, planeDiameter), 0.5f, Random.Range(-planeDiameter, planeDiameter));
-		Instantiate (enemy, enemyPosition, Quaternion.identity);
+		Instantiate (enemyPrefab, enemyPosition, Quaternion.identity);
 	}
 
 }
