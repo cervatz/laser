@@ -4,12 +4,14 @@ using System.Collections;
 public class GameLogic : MonoBehaviour {
 
 	public void Quit() {
-		print ("GameLogic Quit()");
 		Application.Quit ();
 	}
 
 	public void StartGame() {
-		print ("GameLogic StartGame()");
-		Application.LoadLevel("laser");
+		Application.LoadLevel(Names.LASER_SCENE);
+	}
+
+	public void EndGame() {
+		Application.LoadLevel(Names.MENU_SCENE);
 	}
 }
