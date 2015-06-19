@@ -7,16 +7,16 @@ public class TouchInput : MonoBehaviour {
 
 	private Vector3 destination = Vector3.zero;
 
-	private GameObject aimInstance;
+	private GameObject player;
 
-	private GameLogic gameLogicInstance;
+	private GameObject aimInstance;
 
 	// Use this for initialization
 	void Start () {
 		GameObject aimPrefab = (GameObject) Resources.Load(Names.AIM_PREFAB);
 		aimInstance = (GameObject) Instantiate (aimPrefab, new Vector3(0f, Constants.Y, 0f), Quaternion.identity);
 
-		gameLogicInstance = GetComponent<GameLogic>();
+		player = GameObject.Find (Names.PLAYER);
 	}
 	
 	// Update is called once per frame
@@ -45,21 +45,14 @@ public class TouchInput : MonoBehaviour {
 	}
 
 	void Move() {
-		if (aimInstance.transform.position != transform.position) {
-			transform.position = Vector3.MoveTowards (transform.position, destination, speedToDestination * Time.deltaTime);
+		if (aimInstance.transform.position != player.transform.position) {
+			player.transform.position = Vector3.MoveTowards (player.transform.position, destination, speedToDestination * Time.deltaTime);
 		}
 	}
 
 	void LateUpdate() {
 		if (transform.position == destination) {
 			destination = Vector3.zero;
-		}
-	}
-
-	void OnCollisionEnter(Collision collision) {
-		print("collision");
-		if (collision.collider.CompareTag (Tags.ENEMY_TAG)) {
-			gameLogicInstance.EndGame();
 		}
 	}
 }

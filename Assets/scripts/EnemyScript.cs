@@ -1,18 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy : MonoBehaviour {
+public class EnemyScript : MonoBehaviour {
 
-	public float enemySpeed;
+	public float enemySpeed = 5;
 
 	private GameObject player;
 
-	// Use this for initialization
 	void Start () {
-		player = GameObject.Find ("Player");	
+		player = GameObject.Find (Names.PLAYER);	
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		transform.position = Vector3.MoveTowards(transform.position, player.transform.position, enemySpeed*Time.deltaTime);
 	}

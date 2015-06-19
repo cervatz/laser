@@ -48,11 +48,12 @@
   <ItemGroup>
      <Compile Include="Assets\scripts\Constants.cs" />
      <Compile Include="Assets\scripts\Controls.cs" />
-     <Compile Include="Assets\scripts\Enemy.cs" />
      <Compile Include="Assets\scripts\EnemyGenerator.cs" />
+     <Compile Include="Assets\scripts\EnemyScript.cs" />
      <Compile Include="Assets\scripts\GameLogic.cs" />
      <Compile Include="Assets\scripts\Laser.cs" />
      <Compile Include="Assets\scripts\Names.cs" />
+     <Compile Include="Assets\scripts\PlayerScript.cs" />
      <Compile Include="Assets\scripts\Tags.cs" />
      <Compile Include="Assets\scripts\TouchInput.cs" />
  <Reference Include="UnityEngine.UI">
