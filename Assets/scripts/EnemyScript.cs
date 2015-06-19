@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyScript : MonoBehaviour {
 
-	public float enemySpeed = 5;
+	private float enemySpeed = 1;
 
 	private GameObject player;
 
