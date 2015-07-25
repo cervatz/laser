@@ -13,10 +13,10 @@ public class PlayerScript : MonoBehaviour {
 		gameLogic = logicContainer.GetComponent<GameLogic>();
 	}
 
-	void OnCollisionEnter(Collision collision) {
-		print("collision");
-		if (collision.collider.CompareTag (Tags.ENEMY_TAG)) {
-			gameLogic.EndGame();
-		}
-	}
+//	void OnCollisionEnter(Collision collision) {
+//		print("collision");
+//		if (collision.collider.CompareTag (Tags.ENEMY_TAG)) {
+//			gameLogic.EndGame();
+//		}
+//	}
 }

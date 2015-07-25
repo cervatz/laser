@@ -1,17 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Controls.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/TouchInput.cs">
     <Files>
+      <File FileName="Assets/scripts/EnemyGenerator.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/Controls.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/TouchInput.cs" Line="24" Column="38" />
+      <File FileName="Assets/scripts/TouchInput.cs" Line="53" Column="5" />
       <File FileName="Assets/scripts/Laser.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/PlayerScript.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/Tags.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/EnemyGenerator.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/EnemyScript.cs" Line="6" Column="9" />
+      <File FileName="Assets/scripts/EnemyScript.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/Constants.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/GameLogic.cs" Line="10" Column="22" />
-      <File FileName="Assets/scripts/Names.cs" Line="18" Column="2" />
+      <File FileName="Assets/scripts/GameLogic.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Names.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/SwipeControls.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

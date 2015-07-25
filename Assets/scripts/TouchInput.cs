@@ -46,8 +46,11 @@ public class TouchInput : MonoBehaviour {
 
 	void Move() {
 		if (aimInstance.transform.position != player.transform.position) {
+			print ("moving");
+			print ("aim:" + aimInstance.transform.position);
+			print ("player:" + player.transform.position);
 			player.transform.position = Vector3.MoveTowards (player.transform.position, destination, speedToDestination * Time.deltaTime);
-		}
+		} 
 	}
 
 	void LateUpdate() {
