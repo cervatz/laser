@@ -3,9 +3,11 @@ using System.Collections;
 
 public class TouchInput : MonoBehaviour {
 
+	private Animator animator;
+
 	public float speedToDestination;
 
-	private Vector3 destination = Vector3.zero;
+	private Vector3 destination;
 
 	private GameObject player;
 
@@ -17,6 +19,9 @@ public class TouchInput : MonoBehaviour {
 		aimInstance = (GameObject) Instantiate (aimPrefab, new Vector3(0f, Constants.Y, 0f), Quaternion.identity);
 
 		player = GameObject.Find (Names.PLAYER);
+
+		animator = player.GetComponent<Animator> ();
+		animator.SetBool ("default", true);
 	}
 	
 	// Update is called once per frame
@@ -47,10 +52,13 @@ public class TouchInput : MonoBehaviour {
 	void Move() {
 		if (aimInstance.transform.position != player.transform.position) {
 			print ("moving");
-			print ("aim:" + aimInstance.transform.position);
-			print ("player:" + player.transform.position);
 			player.transform.position = Vector3.MoveTowards (player.transform.position, destination, speedToDestination * Time.deltaTime);
-		} 
+			animator.SetBool ("default", false);
+			animator.SetBool ("moving", true);
+		} else {
+			print ("not moving");
+			animator.SetBool ("moving", false);
+		}
 	}
 
 	void LateUpdate() {
